@@ -15,7 +15,7 @@ class TopController < ApplicationController
         @password = params[:pass]
         if @id == "kindai" && @password == "sanriko"
             session[:login_uid] = @id
-            render top_main_path
+            redirect_to top_main_path
         else
             render top_error_path
         end
